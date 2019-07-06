@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
+
+    <!-- Firebase Core JavaScript Link -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script> -->
+    <!-- Link to Moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+    <title>Train Schedule</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+
+        <!-- Jumbotron Title -->
+        <div class="jumbotron">
+            <h1 class="text-center">Train Schedule Around My Beautiful Body</h1>
+            <h3 class="text-center">Fasten your seatbelts and enjoy the ride!</h3>
+        </div>
+
+        <table class="table">
+            <div class="card-header" id="currentTrain">
+                Current Train Schedule
+            </div>
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Next Arrival (MM/DD/YYYY)</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-default">
+                    <div class="card-header">
+
+                    </div>
+                    <div class="card-body">
+                        <h3>Add Train</h3>
+                        <form>
+                            <div class="form-group row">
+                                <label for="train-name">Train Name</label>
+                                <input class="form-control" id="train-name-input" type="text" placeholder="Boarding:">
+                            </div>
+                            <div class="form-group row">
+                                <label for="destination">Destination</label>
+                                <input class="form-control" id="destination-input" type="text" placeholder="Going to:">
+                            </div>
+                            <div class="form-group row">
+                                <label for="train-time">Arrival Time</label>
+                                <input class="form-control" id="train-time-input" type="number" placeholder= "MM/DD/YYYY">
+                            </div>
+                            <div class="form-group row">
+                                <label for="frequency">Frequency (min)</label>
+                                <input class="form-control" id="frequency-input" type="number" placeholder="next train comes in...">
+                            </div>
+                            <button class="btn btn-primary" id="submit-button" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- <script src="/__/firebase/6.2.4/firebase-app.js"></script> -->
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+<!-- Initialize Firebase -->
+<!-- <script src="/__/firebase/init.js"></script> -->
+ <!-- jQuery first, then Popper.js, then Bootstrap JS and lastly external JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/trainSchedule.js"></script>
+</body>
+
+</html>
