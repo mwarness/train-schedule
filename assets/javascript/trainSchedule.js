@@ -11,17 +11,25 @@
 // firebase.initializeApp(config);
 
 // var database = firebase.database();
-// 2. Button for adding Employees
+//  buttons from input
 $("#submit-button").on("click", function (event) {
     event.preventDefault();
 
     // Grabs user input
     var trainName = $("#train-name-input").val().trim();
     var trainDest = $("#destination-input").val().trim();
-    var trainNext = $("#train-time-input").val().trim(); ("MM/DD/YYYY").format("X");
+    var trainNext = $("#train-time-input").val().trim(); ("HH:mm");
     var trainFreq = moment($("#frequency-input").val().trim());
-    // var minutesAway = moment().endOf(trainDest).fromNow();
-    console.log(trainName);
+    // console.log(trainName);
+    // console.log(trainDest);
+    // console.log(trainNext);
+    // console.log(trainFreq);
+    var currentTime = moment().format("HH:mm");
+    console.log(currentTime);
+    // var minutesAway= moment(currentTime -= trainNext).format("HH:mm");
+     var minutesAway = moment().endOf(trainNext).fromNow(currentTime).format("HH:mm");
+    console.log(minutesAway);
+   
     // Creates local "temporary" object for holding employee data
     var searchTrain = {
         name: trainName,
@@ -29,7 +37,9 @@ $("#submit-button").on("click", function (event) {
         arrival: trainNext,
         frequency: trainFreq
     };
+    
 
     // Uploads train data to the database
     // database.ref().push(searchTrain)
 
+});
