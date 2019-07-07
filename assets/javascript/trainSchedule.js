@@ -1,16 +1,16 @@
 
 // object for configuing firebase (need to figure out the specifics)
 
-// var config = {
-//     apiKey: "AIzaSyA_QypGPkcjPtylRDscf7-HQl8ribnFeIs",
-//     authDomain: "time-sheet-55009.firebaseapp.com",
-//     databaseURL: "https://time-sheet-55009.firebaseio.com",
-//     storageBucket: "time-sheet-55009.appspot.com"
-// };
+var config = {
+    apiKey: "AIzaSyAR2X6iPzbdWIqmsngcoN5_6TGs6nsVtZ4",
+    authDomain: "trainschedule-hw7-2019.firebaseio.com",
+    databaseURL: "https://trainschedule-hw7-2019.firebaseio.com/",
+    storageBucket: "time-sheet-55009.appspot.com"
+};
 
 // firebase.initializeApp(config);
 
-// var database = firebase.database();
+var database = firebase.database();
 //  buttons from input
 $("#submit-button").on("click", function (event) {
     event.preventDefault();
