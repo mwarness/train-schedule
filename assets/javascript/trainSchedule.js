@@ -8,7 +8,7 @@ var config = {
     storageBucket: "time-sheet-55009.appspot.com"
 };
 
-// firebase.initializeApp(config);
+firebase.initializeApp(config);
 
 var database = firebase.database();
 //  buttons from input
@@ -18,28 +18,22 @@ $("#submit-button").on("click", function (event) {
     // Grabs user input
     var trainName = $("#train-name-input").val().trim();
     var trainDest = $("#destination-input").val().trim();
-    var trainNext = $("#train-time-input").val().trim(); ("HH:mm");
-    var trainFreq = moment($("#frequency-input").val().trim());
-    // console.log(trainName);
-    // console.log(trainDest);
-    // console.log(trainNext);
-    // console.log(trainFreq);
+    var trainNext = $("#train-time-input").val().trim();
+    var trainFreq = $("#frequency-input").val().trim();
+
+    console.log(trainName);
+    console.log(trainDest);
+    console.log(trainNext);
+    console.log(trainFreq);
+
     var currentTime = moment().format("HH:mm");
     console.log(currentTime);
     // var minutesAway= moment(currentTime -= trainNext).format("HH:mm");
-     var minutesAway = moment().endOf(trainNext).fromNow(currentTime).format("HH:mm");
+    var minutesAway = trainNext -= moment().fromNow(currentTime); ("HH:mm");
     console.log(minutesAway);
-   
-    // Creates local "temporary" object for holding employee data
-    var searchTrain = {
-        name: trainName,
-        destination: trainDest,
-        arrival: trainNext,
-        frequency: trainFreq
-    };
-    
+
 
     // Uploads train data to the database
-    // database.ref().push(searchTrain)
+    database.ref().push(searchTrain)
 
 });
