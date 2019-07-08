@@ -6,12 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
-
     <script src="https://code.jquery.com/jquery-2.2.4.js"
         integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 
@@ -19,18 +13,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
-
-
-
     
-   
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Barriecito|Amatic+SC|Rubik+Mono+One|Sniglet&display=swap" rel="stylesheet">
+
 
     <!-- Initialize Firebase -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
-   
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+
+    <!-- moment js -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 
@@ -58,11 +51,11 @@
                 <tr>
                     <th scope="col">Train Name</th>
                     <th scope="col">Destination</th>
-                    <th scope="col">Fist Train (HH:mm)</th>
+                    <th scope="col">First Train (HH:mm)</th>
                     <th scope="col">Frequency (min)</th>
                     <th scope="col">Minutes Away</th>
                     <th scope="col">Next Train (HH:mm)</th>
-                    
+
                 </tr>
             </thead>
             <tbody id="userInput">
@@ -80,24 +73,24 @@
                     <!-- form for user input begins-->
 
                     <div class="card-body">
-                        <h3>Add Train</h3>
+                        <h3 id="athdr">Add Train</h3>
                         <form>
                             <div class="form-group row">
                                 <label for="train-name">Train Name</label>
-                                <input class="form-control" id="train-name-input" type="text" placeholder="Boarding:">
+                                <input class="form-control" id="train-name-input" type="text" placeholder="What yo train be called...">
                             </div>
                             <div class="form-group row">
                                 <label for="destination">Destination</label>
-                                <input class="form-control" id="destination-input" type="text" placeholder="Going to:">
+                                <input class="form-control" id="destination-input" type="text" placeholder="Where it be goin...">
                             </div>
                             <div class="form-group row">
                                 <label for="train-time">Arrival Time</label>
-                                <input class="form-control" id="train-time-input" type="number" placeholder="MM:mm">
+                                <input class="form-control" id="train-time-input" type="number" placeholder="HH:mm">
                             </div>
                             <div class="form-group row">
                                 <label for="frequency">Frequency (min)</label>
                                 <input class="form-control" id="frequency-input" type="number"
-                                    placeholder="next train comes in...">
+                                    placeholder="When that next one be comin...">
                             </div>
                             <!-- submit buttons -->
                             <button class="btn btn-primary" id="submit-button" type="submit">Submit</button>
@@ -110,10 +103,10 @@
     </div>
 
 
-  
 
-    <!-- Initialize Firebase -->
-  
+
+
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS and lastly external JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
