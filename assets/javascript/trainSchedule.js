@@ -26,11 +26,12 @@ $("#submit-button").on("click", function (event) {
     console.log(trainNext);
     console.log(trainFreq);
 
+    // creates cuurent time
     var currentTime = moment().format("HH:mm");
     console.log(currentTime);
 
     // var minutesAway= moment(currentTime -= trainNext).format("HH:mm");
-    var minutesAway = trainNext -= moment().fromNow(currentTime); ("HH:mm");
+    var minutesAway = trainNext += moment().fromNow(currentTime); ("HH:mm");
     console.log(minutesAway);
 
     //grab user input for first train time and converts into military time with moment
@@ -73,5 +74,19 @@ $("#submit-button").on("click", function (event) {
 
     // Uploads train data to the database
     database.ref().push(searchTrain)
+
+    // appends data called upon onto table
+    $("#userInput").append(
+        $("<tr>").append(
+            $("<td>").text(searchTrain.name),
+            $("<td>").text(searchTrain.destination),
+            $("<td>").text(searchTrain.arrival),
+            $("<td>").text(searchTrain.frequency),
+            $("<td>").text(searchTrain.minutesTillNextTrain),
+            $("<td>").text(searchTrain.nextTrainArrival)
+
+
+        )
+    );
 
 });

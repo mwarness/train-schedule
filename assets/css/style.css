@@ -1,10 +1,7 @@
 h1{
     font-family: "Barriecito";
 }
-/* #currentTrain{
-    background-color:
 
-} */
 h3{
     font-family: "Amatic SC";
 }
@@ -14,29 +11,28 @@ h3{
 }
 
 #userInput{
-    font-family: "Amatic SC";
-
+    font-family: "Sniglet";
 }
 
 .jumbotron{
     background-image: url("https://cdn.images.express.co.uk/img/dynamic/143/590x/Burnout-Paradise-921605.jpg");
     background-size: cover;
     padding-bottom: 210px;
-      
 }
+
 #currentTrain{
     font-family:"Rubik Mono One";
-    
+    font-size: 30px;    
 }
-form{
-    font-family: "Sniglet";
 
-    
+form{
+    font-family: "Sniglet";    
 }
 
 #athdr{
     font-family: "Rubik Mono One";
 }
+
 input::placeholder{
     font-family: "Amatic SC";
 }
